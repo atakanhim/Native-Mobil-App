@@ -4,6 +4,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -17,11 +18,15 @@ import org.w3c.dom.Text;
 
 public class MainActivity extends FragmentActivity {
     //AutoCompleteTextView autoCompleteTextView;
+
     private Spinner mySpinner;
     private  CustomSpinnerAdapter mAdepter;
     private  Menus mMenu;
+    //buttons
+    private Button exchangeBtn;
 
     private void init(){
+        exchangeBtn = findViewById(R.id.doviz_btn);
         mySpinner=findViewById(R.id.spinner);
         mAdepter = new CustomSpinnerAdapter(Menus.getData(this),this);
         mySpinner.setAdapter(mAdepter);
@@ -30,10 +35,7 @@ public class MainActivity extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
         init();// menü ekleniyor
-        System.out.println("**asdad");
         mySpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int i, long l) {
@@ -45,11 +47,22 @@ public class MainActivity extends FragmentActivity {
                 changeFragment(parent,0);
             }
         });
+        //butona basıldıgında
+        exchangeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openDovizActivity();
+            }
+        });
 
+    }
+    private void openDovizActivity(){
+        Intent i  = new Intent(this,dovizActivity.class);//Burası butona eklenecek
+        startActivity(i);
     }
     private void changeFragment(AdapterView<?> parent,int pos){
         mMenu = (Menus) parent.getItemAtPosition(pos);
-        System.out.println(mMenu.getIconName());
+        System.out.println(mMenu.getIconName());//Switch case ile yapılcak
         if(mMenu.getIconName()=="MAIN SCREEN"){
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
             MainScreen mainScreen = new MainScreen();
@@ -62,12 +75,15 @@ public class MainActivity extends FragmentActivity {
             transaction.replace(R.id.fragment_container,mapScreen);
             transaction.commit();
         }
-        if(mMenu.getIconName()=="TURKISH BREAKFAST"){
+        if(mMenu.getIconName()=="BREAKFAST"){
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
             BreakfastScreen breakFastscreen = new BreakfastScreen();
             transaction.replace(R.id.fragment_container,breakFastscreen);
             transaction.commit();
         }
+
+
+        /**/
 
 
     }

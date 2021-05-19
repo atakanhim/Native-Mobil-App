@@ -1,6 +1,31 @@
 <resources>
-    <string name="app_name">My Application</string>
-    <string name="test">Test</string>
-    <string name="textview">TextView</string>
+    <string name="app_name">Exchange</string>
 
+
+    <string-array name="currencies">
+        <item>EUR</item>
+        <item>TRY</item>
+        <item>USD</item>
+        <item>GBP</item>
+        <item>DKK</item>
+        <item>SEK</item>
+        <item>AUD</item>
+        <item>CAD</item>
+        <item>JPY</item>
+
+
+    </string-array>
+
+    <string-array name="currencies2">
+        <item>USD</item>
+        <item>TRY</item>
+        <item>EUR</item>
+        <item>GBP</item>
+        <item>DKK</item>
+        <item>SEK</item>
+        <item>AUD</item>
+        <item>CAD</item>
+        <item>JPY</item>
+
+    </string-array>
 </resources>
