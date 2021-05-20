@@ -1,7 +1,5 @@
 <resources>
     <string name="app_name">Exchange</string>
-
-
     <string-array name="currencies">
         <item>EUR</item>
         <item>TRY</item>
@@ -12,10 +10,7 @@
         <item>AUD</item>
         <item>CAD</item>
         <item>JPY</item>
-
-
     </string-array>
-
     <string-array name="currencies2">
         <item>USD</item>
         <item>TRY</item>
@@ -26,6 +21,5 @@
         <item>AUD</item>
         <item>CAD</item>
         <item>JPY</item>
-
     </string-array>
 </resources>

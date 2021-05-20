@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.1"
-        android:background="#6EDD1E"
+        android:background="#236EDD1E"
         android:gravity="center">
 
         <Spinner
@@ -25,7 +25,6 @@
             android:layout_centerInParent="true"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp" />
-
 
 
     </LinearLayout>
@@ -41,25 +40,27 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:background="#22010D7A"
         android:gravity="center"
-        android:layout_weight="0.1">
+        >
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@color/black"
-            android:text="Burası Alt bölge"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="30dp"
-            android:textStyle="italic" />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="56dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="30dp"
+            android:src="@drawable/exchange" />
 
         <Button
             android:id="@+id/doviz_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Doviz Islemleri" />
+            android:layout_width="155dp"
+            android:layout_height="60dp"
+            android:background="@drawable/border_radius"
+            android:text="Currency transactions"
+            android:textColor="@color/teal_700"
+            android:textSize="16dp"
+            android:textStyle="italic" />
 
     </LinearLayout>
 

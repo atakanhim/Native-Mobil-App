@@ -4,80 +4,96 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#6B76E3A2">
+    android:background="#5B6EFFDC">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="220dp"
-        android:text="Currency Transactions"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="30dp"
-        android:textStyle="italic" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="false"
-        android:layout_centerInParent="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
-        android:background="#00AFFF"
-        app:cardCornerRadius="10dp">
-
-        <LinearLayout
-            android:id="@+id/main_linear"
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#B086EADF"
-            android:gravity="center"
-            android:orientation="vertical">
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="50dp"
+            android:fontFamily="sans-serif-thin"
+            android:text="Currency Transactions"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="44dp"
+            android:textStyle="italic" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="#00AFFF"
+            app:cardCornerRadius="10dp">
 
             <LinearLayout
-                android:id="@+id/first_linear"
+                android:id="@+id/main_linear"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:background="#B086EADF"
+                android:gravity="center"
+                android:orientation="vertical">
 
-                <EditText
-                    android:id="@+id/et_firstConversion"
-                    android:layout_width="215dp"
+                <LinearLayout
+                    android:id="@+id/first_linear"
+                    android:layout_width="365dp"
                     android:layout_height="wrap_content"
-                    android:ems="5"
-                    android:hint="From"
-                    android:inputType="number" />
+                    android:orientation="horizontal">
 
-                <Spinner
-                    android:id="@+id/spinner_firstConversion"
-                    android:layout_width="133dp"
-                    android:layout_height="match_parent" />
-            </LinearLayout>
+                    <EditText
+                        android:id="@+id/et_firstConversion"
+                        android:layout_width="215dp"
+                        android:layout_height="wrap_content"
+                        android:ems="5"
+                        android:hint="Currency"
+                        android:inputType="number"
+                        android:textColorHint="@color/teal_700" />
 
-            <LinearLayout
-                android:id="@+id/second_linear"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                    <Spinner
+                        android:id="@+id/spinner_firstConversion"
+                        android:layout_width="133dp"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
 
-                <EditText
-                    android:id="@+id/et_secondConversion"
-                    android:layout_width="215dp"
+                <LinearLayout
+                    android:id="@+id/second_linear"
+                    android:layout_width="365dp"
                     android:layout_height="wrap_content"
-                    android:ems="5"
-                    android:hint="From"
-                    android:inputType="number" />
+                    android:orientation="horizontal">
 
-                <Spinner
-                    android:id="@+id/spinner_secondConversion"
-                    android:layout_width="133dp"
-                    android:layout_height="match_parent" />
+                    <EditText
+                        android:id="@+id/et_secondConversion"
+                        android:layout_width="215dp"
+                        android:layout_height="wrap_content"
+                        android:ems="5"
+                        android:hint="Currency"
+                        android:inputType="number"
+                        android:textColorHint="@color/teal_700" />
+
+                    <Spinner
+                        android:id="@+id/spinner_secondConversion"
+                        android:layout_width="133dp"
+                        android:layout_height="match_parent" />
+
+                </LinearLayout>
 
             </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
-        </LinearLayout>
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/exchange" />
+    </LinearLayout>
 
-    </androidx.cardview.widget.CardView>
 
 </RelativeLayout>

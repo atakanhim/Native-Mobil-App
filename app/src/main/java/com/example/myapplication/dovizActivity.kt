@@ -23,13 +23,13 @@ class dovizActivity : AppCompatActivity() {
     var baseCurrency = "EUR"
     var convertedToCurrency = "USD"
     var conversionRate = 0f
-    var API = "https://api.ratesapi.io/api/latest?base=$baseCurrency&symbols=$convertedToCurrency"
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_doviz)
+
         spinnerSetup()
         textChangedStuff()
-
     }
 
     private fun textChangedStuff() {
@@ -57,7 +57,8 @@ class dovizActivity : AppCompatActivity() {
     private fun getApiResult() {
         if (et_firstConversion != null && et_firstConversion.text.isNotEmpty() && et_firstConversion.text.isNotBlank()) {
 
-
+            var API =
+                "https://api.ratesapi.io/api/latest?base=$baseCurrency&symbols=$convertedToCurrency"
 
             if (baseCurrency == convertedToCurrency) {
                 Toast.makeText(
@@ -156,4 +157,6 @@ class dovizActivity : AppCompatActivity() {
 
         })
     }
+
+
 }
