@@ -57,8 +57,7 @@ class dovizActivity : AppCompatActivity() {
     private fun getApiResult() {
         if (et_firstConversion != null && et_firstConversion.text.isNotEmpty() && et_firstConversion.text.isNotBlank()) {
 
-            var API =
-                "https://api.ratesapi.io/api/latest?base=$baseCurrency&symbols=$convertedToCurrency"
+            var API = "http://data.fixer.io/api/latest?access_key=5bd81d220f148730af0388da544b560c&base=EUR"
 
             if (baseCurrency == convertedToCurrency) {
                 Toast.makeText(
