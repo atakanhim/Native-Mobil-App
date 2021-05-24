@@ -20,9 +20,10 @@ import java.lang.Exception
 import java.net.URL
 
 class dovizActivity : AppCompatActivity() {
-    var baseCurrency = "EUR"
+    var baseCurrency = "EUR" // ilk deger degistirelemez malesef
     var convertedToCurrency = "USD"
     var conversionRate = 0f
+    var currentCurrency = "USD" // spinnerdaki son degisen degeri almak icin
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,6 +34,7 @@ class dovizActivity : AppCompatActivity() {
     }
 
     private fun textChangedStuff() {
+
         et_firstConversion.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {
                 try {
@@ -43,11 +45,11 @@ class dovizActivity : AppCompatActivity() {
             }
 
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-                Log.d("Main", "Before Text Changed")
+                // boss
             }
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                Log.d("Main", "OnTextChanged")
+               // boss
             }
 
         })
@@ -55,7 +57,7 @@ class dovizActivity : AppCompatActivity() {
     }
 
     private fun getApiResult() {
-        if (et_firstConversion != null && et_firstConversion.text.isNotEmpty() && et_firstConversion.text.isNotBlank()) {
+        if (et_firstConversion.text.toString() != " "){
 
             var API = "http://data.fixer.io/api/latest?access_key=5bd81d220f148730af0388da544b560c&base=EUR"
 
@@ -64,6 +66,7 @@ class dovizActivity : AppCompatActivity() {
                     applicationContext,
                     "Please pick a currency to convert",
                     Toast.LENGTH_SHORT
+
                 ).show()
             } else {
 
@@ -94,7 +97,11 @@ class dovizActivity : AppCompatActivity() {
                 }
             }
         }
+        et_secondConversion.setText("")
+
     }
+
+
 
     private fun spinnerSetup() {
         val spinner: Spinner = findViewById(R.id.spinner_firstConversion)
@@ -124,7 +131,7 @@ class dovizActivity : AppCompatActivity() {
 
         spinner.onItemSelectedListener = (object : AdapterView.OnItemSelectedListener {
             override fun onNothingSelected(parent: AdapterView<*>?) {
-                TODO("Not yet implemented")
+                //Boss
             }
 
             override fun onItemSelected(
@@ -138,12 +145,10 @@ class dovizActivity : AppCompatActivity() {
             }
 
         })
-
         spinner2.onItemSelectedListener = (object : AdapterView.OnItemSelectedListener {
             override fun onNothingSelected(parent: AdapterView<*>?) {
-                TODO("Not yet implemented")
+                //Boss
             }
-
             override fun onItemSelected(
                 parent: AdapterView<*>?,
                 view: View?,

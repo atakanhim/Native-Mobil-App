@@ -1,20 +1,13 @@
 package com.example.myapplication;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentActivity;
-import androidx.fragment.app.FragmentTransaction;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.Spinner;
-import android.widget.TextView;
 
-import org.w3c.dom.Text;
+import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentTransaction;
 
 public class MainActivity extends FragmentActivity {
     //AutoCompleteTextView autoCompleteTextView;
@@ -57,7 +50,8 @@ public class MainActivity extends FragmentActivity {
 
     }
     private void openDovizActivity(){
-        Intent i  = new Intent(this,dovizActivity.class);//Burası butona eklenecek
+
+        Intent i  = new Intent(this,MainActivity2.class);//Burası butona eklenecek
         startActivity(i);
     }
     private void changeFragment(AdapterView<?> parent,int pos){
