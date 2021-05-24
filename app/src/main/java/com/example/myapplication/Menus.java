@@ -36,10 +36,14 @@ public class Menus {
         Integer[] listMenu = {
                 R.drawable.home,
                 R.drawable.breakfast,
+                R.drawable.map,
+                R.drawable.exchange
         };
         String[] listMenuName = {
                 "MAIN SCREEN",
                 "BREAKFAST",
+                "PLACES TO GO",
+                "FOREIGN CURRENCY"
         };
 
         ArrayList<Menus> menulist = new ArrayList<>();

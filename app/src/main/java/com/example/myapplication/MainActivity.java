@@ -18,12 +18,7 @@ public class MainActivity extends FragmentActivity {
     private  CustomSpinnerAdapter mAdepter;
     private  Menus mMenu;
     //buttons
-    private Button exchangeBtn;
-    private Button map;
-
     private void init(){
-        exchangeBtn = findViewById(R.id.doviz_btn);
-        map = findViewById(R.id.map_btn);
         mySpinner=findViewById(R.id.spinner);
         mAdepter = new CustomSpinnerAdapter(Menus.getData(this),this);
         mySpinner.setAdapter(mAdepter);
@@ -32,6 +27,7 @@ public class MainActivity extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         // loginden gelen veri alınıyor
         Intent gelenbilgi = getIntent();
         String userName = gelenbilgi.getStringExtra("userName");
@@ -50,19 +46,7 @@ public class MainActivity extends FragmentActivity {
                 changeFragment(parent,0);
             }
         });
-        // butona basıldıgında activity çagırıcak
-        exchangeBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                changeActivity("exchange");
-            }
-        });
-        map.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                changeActivity("map");
-            }
-        });
+
 
     }
 
@@ -87,18 +71,22 @@ public class MainActivity extends FragmentActivity {
             transaction.replace(R.id.fragment_container,mainScreen);
             transaction.commit();
         }
-        if(mMenu.getIconName()=="TURKEY MAP"){
-            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-            MapScreen mapScreen = new MapScreen();
-            transaction.replace(R.id.fragment_container,mapScreen);
-            transaction.commit();
-        }
+
         if(mMenu.getIconName()=="BREAKFAST"){
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
             BreakfastScreen breakFastscreen = new BreakfastScreen();
+
             transaction.replace(R.id.fragment_container,breakFastscreen);
             transaction.commit();
         }
+        if(mMenu.getIconName()=="PLACES TO GO")
+            changeActivity("map");
+
+        if(mMenu.getIconName()=="FOREIGN CURRENCY")
+            changeActivity("exchange");
+
+
+
 
 
         /**/
