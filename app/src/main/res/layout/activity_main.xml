@@ -42,22 +42,39 @@
         android:layout_height="0dp"
         android:layout_weight="0.1"
         android:background="#22010D7A"
-        android:gravity="center"
-        >
+        android:gravity="center">
 
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="56dp"
-            android:layout_height="60dp"
-            android:layout_marginRight="30dp"
+            android:layout_height="match_parent"
             android:src="@drawable/exchange" />
 
         <Button
             android:id="@+id/doviz_btn"
-            android:layout_width="155dp"
-            android:layout_height="60dp"
+            android:layout_width="123dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
             android:background="@drawable/border_radius"
             android:text="Currency transactions"
+            android:textColor="@color/teal_700"
+            android:textSize="16dp"
+            android:textStyle="italic" />
+
+        <ImageView
+            android:id="@+id/map_img"
+            android:layout_width="56dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/map" />
+
+        <Button
+            android:id="@+id/map_btn"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/border_radius"
+            android:text="Places To Go "
             android:textColor="@color/teal_700"
             android:textSize="16dp"
             android:textStyle="italic" />

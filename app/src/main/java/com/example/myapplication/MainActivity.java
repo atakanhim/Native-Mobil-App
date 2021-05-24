@@ -24,9 +24,11 @@ public class MainActivity extends FragmentActivity {
     private  Menus mMenu;
     //buttons
     private Button exchangeBtn;
+    private Button map;
 
     private void init(){
         exchangeBtn = findViewById(R.id.doviz_btn);
+        map = findViewById(R.id.map_btn);
         mySpinner=findViewById(R.id.spinner);
         mAdepter = new CustomSpinnerAdapter(Menus.getData(this),this);
         mySpinner.setAdapter(mAdepter);
@@ -47,18 +49,36 @@ public class MainActivity extends FragmentActivity {
                 changeFragment(parent,0);
             }
         });
-        //butona basıldıgında
+        // butona basıldıgında activity çagırıcak
         exchangeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openDovizActivity();
+                changeActivity("exchange");
+            }
+        });
+        map.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                changeActivity("map");
             }
         });
 
     }
+<<<<<<< Updated upstream
     private void openDovizActivity(){
         Intent i  = new Intent(this,dovizActivity.class);//Burası butona eklenecek
         startActivity(i);
+=======
+    private void changeActivity(String activityName){
+        if(activityName == "map") {
+            Intent i = new Intent(this, MainActivity2.class);//Burası butona eklenecek
+            startActivity(i);
+        }
+        if(activityName == "exchange") {
+            Intent i = new Intent(this, dovizActivity.class);//Burası butona eklenecek
+            startActivity(i);
+        }
+>>>>>>> Stashed changes
     }
     private void changeFragment(AdapterView<?> parent,int pos){
         mMenu = (Menus) parent.getItemAtPosition(pos);

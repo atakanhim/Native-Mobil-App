@@ -35,12 +35,10 @@ public class Menus {
     public static ArrayList<Menus> getData(Context mContext){
         Integer[] listMenu = {
                 R.drawable.home,
-                R.drawable.map,
                 R.drawable.breakfast,
         };
         String[] listMenuName = {
                 "MAIN SCREEN",
-                "TURKEY MAP",
                 "BREAKFAST",
         };
 
