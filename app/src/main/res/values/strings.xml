@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Exchange</string>
+    <string name="app_name">My Guide to Turkey</string>
     <string name="title_activity_maps">Map</string>
     <string-array name="currencies">
         <item>EUR</item>
