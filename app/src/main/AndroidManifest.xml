@@ -20,6 +20,7 @@
         <activity android:name=".MainActivity2"></activity>
         <activity android:name=".MapsActivity" />
         <activity android:name=".dovizActivity" />
+        <activity android:name=".MainActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -32,7 +33,7 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBFBxPOpQBo1_74w7--vDxpZCIYrE0zPik" />
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

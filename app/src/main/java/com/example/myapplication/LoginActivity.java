@@ -19,7 +19,7 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
         EditText usernameText = findViewById(R.id.editTextPersonName);
         EditText passwordText = findViewById(R.id.editTextPassword);
         CardView card_view = findViewById(R.id.CardView); // creating a CardView and assigning a value.
@@ -47,7 +47,11 @@ public class LoginActivity extends AppCompatActivity {
                                 finish();
                                 exit(1);
                             }
+
                     }
+
+                        usernameText.setText("");
+                        passwordText.setText("");
                     Toast toast = Toast.makeText(getApplicationContext(),"Giriş Bilgilerinizi Kontrol Ediniz", Toast.LENGTH_SHORT);
                     toast.show();
                 }

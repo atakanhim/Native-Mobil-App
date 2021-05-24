@@ -57,12 +57,9 @@ public class MainActivity extends FragmentActivity {
         });
 
     }
-<<<<<<< Updated upstream
-    private void openDovizActivity(){
 
-        Intent i  = new Intent(this,MainActivity2.class);//Burası butona eklenecek
-        startActivity(i);
-=======
+
+
     private void changeActivity(String activityName){
         if(activityName == "map") {
             Intent i = new Intent(this, MainActivity2.class);//Burası butona eklenecek
@@ -72,7 +69,6 @@ public class MainActivity extends FragmentActivity {
             Intent i = new Intent(this, dovizActivity.class);//Burası butona eklenecek
             startActivity(i);
         }
->>>>>>> Stashed changes
     }
     private void changeFragment(AdapterView<?> parent,int pos){
         mMenu = (Menus) parent.getItemAtPosition(pos);
