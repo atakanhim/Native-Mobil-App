@@ -32,7 +32,7 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBFBxPOpQBo1_74w7--vDxpZCIYrE0zPik" />
 
-        <activity android:name=".LoginActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
