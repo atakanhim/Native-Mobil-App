@@ -41,14 +41,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     SQLiteDatabase database;
 
     @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        Intent intentToMain = new Intent(this,MainActivity.class);
-        startActivity(intentToMain);
-        finish();
-    }
-
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
