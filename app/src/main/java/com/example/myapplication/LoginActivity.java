@@ -39,10 +39,11 @@ public class LoginActivity extends AppCompatActivity {
                     String strArray[] = txt.split(" ");
 
                     for(int i=0; i < strArray.length; i++) {
-                            if(usernameText.getText().toString().equals(strArray[i]) && passwordText.getText().toString().equals(strArray[i+1])) {
+                            if(usernameText.getText().toString().toLowerCase().equals(strArray[i].toLowerCase()) && passwordText.getText().toString().equals(strArray[i+1])) {
                                 Toast toast = Toast.makeText(getApplicationContext(),"Giriş Başarılı", Toast.LENGTH_SHORT);
                                 toast.show();
                                 Intent ii = new Intent(LoginActivity.this,MainActivity.class);
+                                ii.putExtra("userName",strArray[i]);
                                 startActivity(ii);
                                 finish();
                                 exit(1);

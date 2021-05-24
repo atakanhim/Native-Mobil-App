@@ -5,6 +5,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentTransaction;
@@ -12,6 +13,7 @@ import androidx.fragment.app.FragmentTransaction;
 public class MainActivity extends FragmentActivity {
     //AutoCompleteTextView autoCompleteTextView;
 
+    // fonks
     private Spinner mySpinner;
     private  CustomSpinnerAdapter mAdepter;
     private  Menus mMenu;
@@ -30,6 +32,12 @@ public class MainActivity extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        // loginden gelen veri alınıyor
+        Intent gelenbilgi = getIntent();
+        String userName = gelenbilgi.getStringExtra("userName");
+        Toast toast = Toast.makeText(getApplicationContext(),"Welcome "+userName, Toast.LENGTH_LONG);
+        toast.show();
+
         init();// menü ekleniyor
         mySpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
