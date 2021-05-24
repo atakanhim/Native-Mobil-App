@@ -75,7 +75,7 @@
                         android:layout_height="wrap_content"
                         android:ems="5"
                         android:hint="Currency"
-                        android:inputType="number"
+                        android:inputType="none|number"
                         android:textColorHint="@color/teal_700" />
 
                     <Spinner
