@@ -10,6 +10,14 @@
     >
 
 
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextPassword"
+        android:layout_marginTop="-152dp"
+        android:text="Register Here" />
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
@@ -57,7 +65,7 @@
         android:layout_marginTop="59dp"
         app:cardBackgroundColor="@color/design_default_color_secondary"
         app:cardCornerRadius="25dp"
-        app:cardMaxElevation="10dp" >
+        app:cardMaxElevation="10dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -67,23 +75,12 @@
                 android:id="@+id/textViewLogin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
                 android:text="Login"
                 android:textColor="#fff"
-                android:layout_centerInParent="true"
-                android:textSize="18sp"/>
+                android:textSize="18sp" />
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
-
-
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/editTextPassword"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="200dp"
-        android:text="Register Here" />
 
 
 </RelativeLayout>

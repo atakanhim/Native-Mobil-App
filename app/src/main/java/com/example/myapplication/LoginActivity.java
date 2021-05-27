@@ -30,7 +30,8 @@ public class LoginActivity extends AppCompatActivity {
 
                 String txt = "";
                 try {
-                    InputStream is = getAssets().open("UserData.txt");
+                   InputStream is = openFileInput("UserData.txt");
+                  //  InputStream is = getAssets().open("UserData.txt");
                     int size =  is.available();
                     byte[] buffer = new byte[size];
                     is.read(buffer);
@@ -39,7 +40,9 @@ public class LoginActivity extends AppCompatActivity {
                     String strArray[] = txt.split(" ");
 
                     for(int i=0; i < strArray.length; i++) {
-                            if(usernameText.getText().toString().toLowerCase().equals(strArray[i].toLowerCase()) && passwordText.getText().toString().equals(strArray[i+1])) {
+
+
+                        if(usernameText.getText().toString().toLowerCase().equals(strArray[i].toLowerCase()) && passwordText.getText().toString().equals(strArray[i+1])) {
                                 Toast toast = Toast.makeText(getApplicationContext(),"Giriş Başarılı", Toast.LENGTH_SHORT);
                                 toast.show();
                                 Intent ii = new Intent(LoginActivity.this,MainActivity.class);
@@ -63,12 +66,12 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         });
-        /*registerText.setOnClickListener(new View.OnClickListener() {
+        registerText.setOnClickListener(new View.OnClickListener() {
               @Override
               public void onClick(View v) {
-                  Intent i = new Intent(LoginActivity.this,RegisterActivity.class);
+                  Intent i = new Intent(LoginActivity.this,RegistrActivity.class);
                   startActivity(i);
               }
-        });*/
+        });
     }
 }
